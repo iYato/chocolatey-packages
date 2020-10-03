@@ -1,0 +1,10 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+1. Download release from 
+    32-Bit: <https://github.com/namazso/OpenHashTab/releases/download/v2.2.0/OpenHashTab_setup.exe>
+
+2. Get sha256 checksum with utility of choice
+
+3. Check that it matches checksum of included installer

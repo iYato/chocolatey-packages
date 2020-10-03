@@ -9,16 +9,19 @@ function global:au_GetLatest {
     $url -match '/download/v([\d.]+)/OpenHashTab_setup.exe$'
     $version = $matches[1]
 	
-    return @{ Version = $version; URL = $url }
+    return @{ Version = $version; URL32 = $url }
 }
 
 function global:au_SearchReplace {
     @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+        ".\tools\VERIFICATION.txt" = @{
+            "(?i)(32-Bit.+)\<.*\>"     = "`${1}<$($Latest.URL32)>"
         }
     }
 }
 
-update
+function global:au_BeforeUpdate {
+  Get-RemoteFiles -Purge -NoSuffix 
+}
+
+update -ChecksumFor none
