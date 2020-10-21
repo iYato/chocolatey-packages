@@ -7,7 +7,7 @@ $shortcutPath = [Environment]::GetFolderPath("Programs") + "\Netch.lnk"
 $fileName64 = 'Netch.7z'
 
 $packageArgs = @{
-  packageName    = $env:ChocolateyPackageName
+  packageName    = $packageName
   unzipLocation  = $unzipLocation
   file64         = "$toolsDir\$fileName64"
 
@@ -18,4 +18,5 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-Install-ChocolateyShortcut -shortcutFilePath $shortcutPath -Target "$unzipLocation\Netch.exe"
+$exePath = (Get-Childitem -Path $unzipLocation -Filter "Netch.exe" -Recurse).fullname
+Install-ChocolateyShortcut -shortcutFilePath $shortcutPath -Target "$exePath"

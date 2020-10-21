@@ -5,10 +5,10 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  64-Bit: <https://github.com/NetchX/Netch/releases/download/1.6.2/Netch.7z>
+  64-Bit: <https://github.com/NetchX/Netch/releases/download/1.6.3/Netch.7z>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum64: 98D2DC023A142FAFD9DD95041E4999F45C234E9178419702A7DF262969E50DDA
+  checksum64: 32A07432ACA567E768B47635801062F48577AF821039751E9304F0AE4AD8F23E
