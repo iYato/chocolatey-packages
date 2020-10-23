@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+1. Download release from 
+    32-Bit: <https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.0.10/qbittorrent_4.3.0.10_setup.exe>
+    64-Bit: <https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.0.10/qbittorrent_4.3.0.10_x64_setup.exe>
+
+2. Get sha256 checksum with utility of choice
+
+3. Check that it matches checksum of included installer
+    checksum type: sha256
+    checksum32: C0973CDF825D59572B7CA101FECC3437C3EA954DB3446F0A4454657C3FBE7B20
+    checksum64: 6E062AD3E79B49217E8F25C10109A95FD57D632D8F02B6410AABB24FBF3B4E97
