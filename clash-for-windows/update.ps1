@@ -30,4 +30,4 @@ function global:au_SearchReplace {
     }
 }
 
-if ($MyInvocation.InvocationName -ne '.') { update -ChecksumFor none -NoCheckChocoVersion }
+if ($MyInvocation.InvocationName -ne '.') { update -ChecksumFor none }
