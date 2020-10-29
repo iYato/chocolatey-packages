@@ -18,6 +18,7 @@ function global:au_SearchReplace {
     @{
         "tools\verification.txt" = @{
             "(?i)(checksum32:\s+).*" = "`${1}$($Latest.Checksum32)"
+            "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
         }
     }
 }
