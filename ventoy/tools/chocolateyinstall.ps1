@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName32 = 'ventoy-1.0.26-windows.zip'
+$fileName32 = 'ventoy-1.0.27-windows.zip'
 $packageName = $env:ChocolateyPackageName
 $shortcutsPath = Join-Path ([Environment]::GetFolderPath("Programs")) 'Ventoy.lnk'
 $unzipPath = "$Env:LOCALAPPDATA\$packageName"
