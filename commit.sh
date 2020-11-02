@@ -10,9 +10,10 @@ if ($2!="")
 }' | sort | uniq`
 
 for mod in $mods; do
-	version=`head "$mod/$mod.nuspec" | grep -oP '(?<=<version>).+(?=<\/version>)'`
-	read -rp "`echo -e \"Update $BOLD_GREEN$mod to v$version$RESET? [Y/n]: \"`" -n 1 answer
-	if [[ $answer == 'n' ]]; then
+	version=`cat "$mod/$mod.nuspec" | grep -oP '(?<=<version>).+(?=<\/version>)'`
+	echo -ne "Update $BOLD_GREEN$mod to v$version$RESET? [Y/n]: "
+	read -rn 1 reply
+	if [ $reply == 'n' ]; then
 		echo
 		continue
 	fi
