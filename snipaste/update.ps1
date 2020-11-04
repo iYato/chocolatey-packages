@@ -1,5 +1,9 @@
 $releases = 'https://bitbucket.org/liule/snipaste/downloads/'
 
+function global:au_BeforeUpdate() {
+    Get-RemoteFiles -Purge -NoSuffix
+}
+
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     
@@ -11,18 +15,22 @@ function global:au_GetLatest {
     $url -match 'Snipaste-(.+)-x86.zip'
     $version = $matches[1]
 	
-    return @{ Version = $version; URL = $url; URL64 = $url64 }
+    return @{ Version = $version; URL32 = $url; URL64 = $url64 }
 }
 
 function global:au_SearchReplace {
     @{
+        "tools\verification.txt"      = @{
+            "(?i)(checksum32:\s+).*" = "`${1}$($Latest.Checksum32)"
+            "(?i)(checksum64:\s+).*" = "`${1}$($Latest.Checksum64)"
+            "(?i)(32-Bit.+)\<.*\>"   = "`${1}<$($Latest.URL32)>"
+            "(?i)(64-Bit.+)\<.*\>"   = "`${1}<$($Latest.URL64)>"
+        }
         "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+            "(^[$]fileName32\s*=\s*)('.*')" = "`$1'$($Latest.FileName32)'"
+            "(^[$]fileName64\s*=\s*)('.*')" = "`$1'$($Latest.FileName64)'"
         }
     }
 }
 
-update
+if ($MyInvocation.InvocationName -ne '.') { update -ChecksumFor none }
