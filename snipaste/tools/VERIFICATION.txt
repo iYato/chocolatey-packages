@@ -5,13 +5,13 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from tableplus.com and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.5.3-Beta-x86.zip>
-  64-Bit: <https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.5.3-Beta-x64.zip>
+  32-Bit: <https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.5.4-Beta-x86.zip>
+  64-Bit: <https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.5.4-Beta-x64.zip>
 
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 42AEECBF85BB1A81CF7529767CC9871CC1F1F413E49CB78E4FF2D6AEF7090C2D
-  checksum64: 5584BDA31A601FEE47031EBBFFE61DEB43A2E06AA1FFDCF174D7EF130868E083
+  checksum32: 36DAB0D4B6F2FCBD0F65E2ADDABC716D9BAE86F54A6F23A055814AA0854831A5
+  checksum64: 65C3059726C7A20498AABF6ABD4DDBD6781AECEC784A064CC2877C8C42C60404
