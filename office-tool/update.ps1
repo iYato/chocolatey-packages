@@ -1,25 +1,33 @@
 $releases = 'https://github.com/YerongAI/Office-Tool/releases'
 
-function global:au_GetLatest{
-	$download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-	
-    $regex = '.zip$'
-    $url = $download_page.links | ? href -match $regex | select -First 1 -expand href
-    $url = -Join('https://github.com', $url)
+function global:au_BeforeUpdate() {
+    Get-RemoteFiles -Purge -NoSuffix
+}
 
-	$url -match 'releases/download/([\d.]+)/'
+function global:au_GetLatest {
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+	
+    $regex = 'Office-Tool-v8([\d.]+).zip$'
+    $url32 = $download_page.links | ? href -match $regex | select -First 1 -expand href
+    $url32 = -Join ('https://github.com', $url32)
+
+    $url32 -match 'releases/download/([\d.]+)/'
     $version = $matches[1]
 	
-    return @{ Version = $version; URL = $url }
+    return @{ Version = $version; URL32 = $url32 }
 }
 
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "(^[$]fileName32\s*=\s*)('.*')" = "`$1'$($Latest.FileName32)'"
+        }
+
+        "tools\verification.txt"      = @{
+            "(?i)(32-Bit.+)\<.*\>"   = "`${1}<$($Latest.URL32)>"
+            "(?i)(checksum32:\s+).*" = "`${1}$($Latest.Checksum32)"
         }
     }
 }
 
-if ($MyInvocation.InvocationName -ne '.') { update }
+if ($MyInvocation.InvocationName -ne '.') { update -ChecksumFor none }

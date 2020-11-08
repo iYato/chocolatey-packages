@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>office-tool</id>
-    <version>8.0.3.3</version>
+    <version>8.0.4.7</version>
     <packageSourceUrl>https://github.com/iamGreenim/chocolatey-packages/tree/master/office-tool</packageSourceUrl>
-    <owners>StanLeon</owners>
+    <owners>Yato</owners>
     <title>Office Tool Plus</title>
     <authors>Yerong</authors>
-    <projectUrl>https://otp.landian.vip/zh-cn/#</projectUrl>
+    <projectUrl>https://otp.landian.vip</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/iamGreenim/chocolatey-packages@5e39ed0/office-tool/icon.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <licenseUrl>https://github.com/YerongAI/Office-Tool/blob/master/LICENSE</licenseUrl>
@@ -26,14 +26,10 @@ Office Tool Plus is based on Microsoft's Office Deployment Tool. You can customi
 What's more, you can manage your installed Office, add language packs or customize uninstall Office.
 ]]></description>
     <releaseNotes>https://github.com/YerongAI/Office-Tool/releases</releaseNotes>
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
+    <dependencies>
+      <!-- <dependency id="chocolatey-core.extension" version="1.3.5.1" />
+      <dependency id="dotnetcore-runtime.install" version="3.1.0" /> -->
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
