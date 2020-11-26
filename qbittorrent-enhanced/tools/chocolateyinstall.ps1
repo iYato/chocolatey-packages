@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName32 = 'qbittorrent_4.3.0.10_setup.exe'
-$fileName64 = 'qbittorrent_4.3.0.10_x64_setup.exe'
+$fileName32 = 'qbittorrent_4.3.1.10_setup.exe'
+$fileName64 = 'qbittorrent_4.3.1.10_x64_setup.exe'
 
 $packageArgs = @{
   packageName  = $env:ChocolateyPackageName
@@ -14,4 +14,3 @@ $packageArgs = @{
 }
 
 Install-ChocolateyInstallPackage @packageArgs
-Remove-Item $packageArgs.file $packageArgs.file64
