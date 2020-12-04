@@ -1,9 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$shortcutsPath = [Environment]::GetFolderPath("Programs")
-$localAppData = $Env:LOCALAPPDATA
-$packageName = $env:ChocolateyPackageName
-$installPath = Join-Path -Path "$localAppData" -ChildPath "$packageName"
+$shortcutPath = [Environment]::GetFolderPath("Programs") + "\ShadowsocksR Windows.lnk"
+$unzipLocation = $Env:LOCALAPPDATA + "\$env:ChocolateyPackageName"
 
-Remove-Item -Path (Join-Path -Path $shortcutsPath -ChildPath 'ShadowsocksR Windows.lnk') -ErrorAction SilentlyContinue
-if (Test-Path "$installPath") { Remove-Item -Path "$installPath" -Recurse -Force -ErrorAction SilentlyContinue }
+Remove-Item -Path $shortcutPath -ErrorAction SilentlyContinue
+Remove-Item -Path "$unzipLocation" -Recurse -Force -ErrorAction SilentlyContinue 
