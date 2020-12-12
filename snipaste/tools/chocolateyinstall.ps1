@@ -3,8 +3,8 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $shortcutPath = [Environment]::GetFolderPath("Programs") + '\Snipaste.lnk'
 $unzipLocation = $Env:LOCALAPPDATA + "\$env:ChocolateyPackageName"
-$fileName32 = 'Snipaste-2.5.5-Beta-x86.zip'
-$fileName64 = 'Snipaste-2.5.5-Beta-x64.zip'
+$fileName32 = 'Snipaste-2.5.6-Beta-x86.zip'
+$fileName64 = 'Snipaste-2.5.6-Beta-x64.zip'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
