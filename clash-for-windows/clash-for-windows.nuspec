@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>clash-for-windows</id>
-    <version>0.13.6</version>
+    <version>0.13.7</version>
     <packageSourceUrl>https://github.com/iYato/chocolatey-packages/tree/master/clash-for-windows</packageSourceUrl>
     <owners>Yato</owners>
     <title>Clash for Windows</title>
