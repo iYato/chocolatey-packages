@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>shadowsocksr-windows</id>
-    <version>5.2.2</version>
+    <version>5.2.3</version>
     <packageSourceUrl>https://github.com/iYato/chocolatey-packages/tree/master/shadowsocksr-windows</packageSourceUrl>
     <owners>StanLeon</owners>
     <title>ShadowsocksR-Windows (HMBSbige)</title>
