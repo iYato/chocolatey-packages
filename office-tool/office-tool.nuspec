@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>office-tool</id>
-    <version>8.1.1.3</version>
+    <version>8.1.2.2</version>
     <packageSourceUrl>https://github.com/iamGreenim/chocolatey-packages/tree/master/office-tool</packageSourceUrl>
     <owners>Yato</owners>
     <title>Office Tool Plus</title>
@@ -27,8 +27,8 @@ What's more, you can manage your installed Office, add language packs or customi
 ]]></description>
     <releaseNotes>https://github.com/YerongAI/Office-Tool/releases</releaseNotes>
     <dependencies>
-      <!-- <dependency id="chocolatey-core.extension" version="1.3.5.1" />
-      <dependency id="dotnetcore-runtime.install" version="3.1.0" /> -->
+      <!-- <dependency id="chocolatey-core.extension" version="1.3.5.1" /> -->
+      <dependency id="dotnet-desktopruntime" version="5.0.2" />
     </dependencies>
   </metadata>
   <files>
