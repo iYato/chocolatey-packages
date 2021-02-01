@@ -3,7 +3,7 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
 1. Download release from 
-    32-Bit: <https://github.com/namazso/OpenHashTab/releases/download/v2.3.0/OpenHashTab_setup.exe>
+    32-Bit: <https://github.com/namazso/OpenHashTab/releases/download/v3.0.1/OpenHashTab_setup_system.exe>
 
 2. Get sha256 checksum with utility of choice
 

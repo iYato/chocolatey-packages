@@ -6,7 +6,7 @@ function global:au_GetLatest {
     $regex = '.exe$'
     $url = -Join ('https://github.com', ($download_page.links | ? href -match $regex | select -First 1 -expand href))
 
-    $url -match '/download/v([\d.]+)/OpenHashTab_setup.exe$'
+    $url -match '/download/v([\d.]+)/OpenHashTab'
     $version = $matches[1]
 	
     return @{ Version = $version; URL32 = $url }
