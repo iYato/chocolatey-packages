@@ -5,11 +5,11 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from tableplus.com and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://github.com/ventoy/Ventoy/releases/download/v1.0.33/ventoy-1.0.33-windows.zip>
+  32-Bit: <https://github.com/ventoy/Ventoy/releases/download/v1.0.34/ventoy-1.0.34-windows.zip>
 
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: FD57DBD6E941BB152684B16B5317B5AD03606FB5FDADEACE478F7C7C5A68992F
+  checksum32: 36CE2CC992D078917BDA3048713925083C67F8C3B488F0C2DD39C7AA710B6BD9
