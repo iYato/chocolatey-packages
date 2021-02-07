@@ -8,7 +8,7 @@
     <title>OpenHashTab (Install)</title>
     <authors>namazso</authors>
     <projectUrl>https://github.com/namazso/OpenHashTab</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/openhashtab.png</iconUrl>-->
+    <iconUrl>https://cdn.jsdelivr.net/gh/iYato/chocolatey-packages/openhashtab/icon.png</iconUrl>
     <copyright>Copyright 2019 namazso</copyright>
     <licenseUrl>https://github.com/namazso/OpenHashTab/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
