@@ -5,10 +5,10 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://github.com/YerongAI/Office-Tool/releases/download/8.1.2.2/Office-Tool-v8.1.zip>
+  32-Bit: <https://github.com/YerongAI/Office-Tool/releases/download/8.1.2.7/Office-Tool-v8.1.zip>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 39C33584306A4FAF3713CAA23F042722C833C44918DB98B18191B463178578AF
+  checksum32: 00065BC7FEA1C9EF2ABBB9ECC59B82325CB6F5D81528B59F52BA515B870AB066
