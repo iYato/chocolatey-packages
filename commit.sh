@@ -4,7 +4,7 @@ set -e
 RESET="\e[0m"
 BOLD_GREEN="\e[1;32m"
 
-mods=`git.exe status -s | cut -c4- | awk -F'/' '{
+mods=`git status -s | cut -c4- | awk -F'/' '{
 if ($2!="")
 	print $1
 }' | sort | uniq`
@@ -18,6 +18,6 @@ for mod in $mods; do
 		continue
 	fi
 
-	git.exe add "$mod/"
-	git.exe commit -m "$mod: Update to v$version"
+	git add "$mod/"
+	git commit -m "$mod: Update to v$version"
 done
