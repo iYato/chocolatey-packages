@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/5.2.3/ShadowsocksR-Win32-5.2.3.7z>
-  64-Bit: <https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/5.2.3/ShadowsocksR-Win64-5.2.3.7z>
+  32-Bit: <https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/5.2.4/ShadowsocksR-Win32-5.2.4.7z>
+  64-Bit: <https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/5.2.4/ShadowsocksR-Win64-5.2.4.7z>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 9D86413BBCA59D32684D2AA019C60BBD1AAC477F8F95CF733B0E1283B3DEBD0E
-  checksum64: F2B16FFAF79840E7958F54F8666E850736D55DD5DD0AD88B74C09268D0133192
+  checksum32: FDD30A6A7BAD0860C932B0344FCC2002A1EAA2BD85509BAAEC241D8B17DD5270
+  checksum64: 036535816DCED6A0904AE545885854D3294FA4E0398D1337AC307FB3D8FE1CE4
 
 File 'LICENSE.txt' is obtained from <https://raw.githubusercontent.com/HMBSbige/ShadowsocksR-Windows/master/LICENSE>
