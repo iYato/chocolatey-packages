@@ -1,4 +1,7 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿# Office Tool
+# └── Office Tool Plus.exe
+
+$ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $fileName32 = 'Office-Tool-v8.1.zip'
