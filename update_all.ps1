@@ -1,7 +1,7 @@
 $au_root = $PSScriptRoot
 $Options = [ordered]@{
     Timeout  = 10
-    Threads  = 10
+    Threads  = 4
     Push     = $false
 
     RepeatOn = @(
