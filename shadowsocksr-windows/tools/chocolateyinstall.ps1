@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-$fileName32 = 'ShadowsocksR-Win32-5.2.4.7z'
-$fileName64 = 'ShadowsocksR-Win64-5.2.4.7z'
+$fileName32 = 'ShadowsocksR-Win32-5.2.5.7z'
+$fileName64 = 'ShadowsocksR-Win64-5.2.5.7z'
 
 $shortcutPath = [Environment]::GetFolderPath("Programs") + "\ShadowsocksR Windows.lnk"
 $unzipLocation = $Env:LOCALAPPDATA + "\$env:ChocolateyPackageName"
