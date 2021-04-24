@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName32 = 'PicGo-Setup-2.3.0-beta.5.exe'
+$fileName32 = 'PicGo-Setup-2.3.0-beta.6.exe'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
