@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+export LC_ALL=en_US.utf8
 
 RESET="\e[0m"
 BOLD_GREEN="\e[1;32m"
