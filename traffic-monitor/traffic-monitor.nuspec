@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>traffic-monitor</id>
-    <version>1.80</version>
+    <version>1.80.1</version>
     <packageSourceUrl>https://github.com/iYato/chocolatey-packages/tree/master/traffic-monitor</packageSourceUrl>
     <owners>StanLeon</owners>
     <title>Traffic Monitor</title>
