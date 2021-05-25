@@ -7,7 +7,7 @@ function global:au_BeforeUpdate() {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 	
-    $regex = 'Office-Tool-v8([\d.]+).zip$'
+    $regex = '.+.zip$'
     $url32 = $download_page.links | ? href -match $regex | select -First 1 -expand href
     $url32 = -Join ('https://github.com', $url32)
 
